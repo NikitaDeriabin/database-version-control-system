@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>DBGuard.ConsoleApp.BL</AssemblyName>
+        <RootNamespace>DBGuard.ConsoleApp.BL</RootNamespace>
+        <PackageId>DBGuard.ConsoleApp.BL</PackageId>
+        <Authors>DBGuard.ConsoleApp.BL</Authors>
+        <Company>DBGuard.ConsoleApp.BL</Company>
+        <Product>DBGuard.ConsoleApp.BL</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.1.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="Npgsql" Version="6.0.9" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DBGuard.ConsoleApp.Models\DBGuard.ConsoleApp.Models.csproj" />
+    </ItemGroup>
+
+</Project>
