@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <OutputType>Exe</OutputType>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <AssemblyName>DBGuard.ConsoleApp</AssemblyName>
+	  <RootNamespace>DBGuard.ConsoleApp</RootNamespace>
+	  <PackageId>DBGuard.ConsoleApp</PackageId>
+	  <Authors>DBGuard.ConsoleApp</Authors>
+	  <Company>DBGuard.ConsoleApp</Company>
+	  <Product>DBGuard.ConsoleApp</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+	  <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.21" />
+	  <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="6.0.21" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+    <PackageReference Include="Npgsql" Version="6.0.9" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\DBGuard.ConsoleApp.BL\DBGuard.ConsoleApp.BL.csproj" />
+  </ItemGroup>
+
+</Project>
