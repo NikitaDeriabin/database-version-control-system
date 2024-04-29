@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>DBGuard.SqlService.WebApi</AssemblyName>
+    <RootNamespace>DBGuard.SqlService.WebApi</RootNamespace>
+    <PackageId>DBGuard.SqlService.WebApi</PackageId>
+    <Authors>DBGuard.SqlService.WebApi</Authors>
+    <Company>DBGuard.SqlService.WebApi</Company>
+    <Product>DBGuard.SqlService.WebApi</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DBGuard.AzureBlobStorage\DBGuard.AzureBlobStorage.csproj" />
+    <ProjectReference Include="..\..\Squirrel.Core\DBGuard.Core.Common\DBGuard.Core.Common.csproj" />
+    <ProjectReference Include="..\..\Squirrel.Core\DBGuard.Core.DAL\DBGuard.Core.DAL.csproj" />
+    <ProjectReference Include="..\..\DBGuard.Shared\DBGuard.Shared.csproj" />
+    <ProjectReference Include="..\DBGuard.SqlService.BLL\DBGuard.SqlService.BLL.csproj" />
+  </ItemGroup>
+
+</Project>
