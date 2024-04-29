@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DBGuard.Core.BLL</AssemblyName>
+    <RootNamespace>DBGuard.Core.BLL</RootNamespace>
+    <PackageId>DBGuard.Core.BLL</PackageId>
+    <Authors>DBGuard.Core.BLL</Authors>
+    <Company>DBGuard.Core.BLL</Company>
+    <Product>DBGuard.Core.BLL</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.61.0" />
+    <PackageReference Include="DiffPlex" Version="1.7.1" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DBGuard.AzureBlobStorage\DBGuard.AzureBlobStorage.csproj" />
+    <ProjectReference Include="..\..\DBGuard.ConsoleApp.Models\DBGuard.ConsoleApp.Models.csproj" />
+    <ProjectReference Include="..\..\DBGuard.Shared\DBGuard.Shared.csproj" />
+    <ProjectReference Include="..\DBGuard.Core.Common\DBGuard.Core.Common.csproj" />
+  </ItemGroup>
+
+</Project>
