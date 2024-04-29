@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DBGuard.AzureBlobStorage</AssemblyName>
+    <RootNamespace>DBGuard.AzureBlobStorage</RootNamespace>
+    <PackageId>DBGuard.AzureBlobStorage</PackageId>
+    <Authors>DBGuard.AzureBlobStorage</Authors>
+    <Company>DBGuard.AzureBlobStorage</Company>
+    <Product>DBGuard.AzureBlobStorage</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.17.0" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.0" />
+  </ItemGroup>
+
+</Project>
