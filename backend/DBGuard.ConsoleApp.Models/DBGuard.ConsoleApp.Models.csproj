@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>DBGuard.ConsoleApp.Models</AssemblyName>
+        <RootNamespace>DBGuard.ConsoleApp.Models</RootNamespace>
+        <PackageId>DBGuard.ConsoleApp.Models</PackageId>
+        <Authors>DBGuard.ConsoleApp.Models</Authors>
+        <Company>DBGuard.ConsoleApp.Models</Company>
+        <Product>DBGuard.ConsoleApp.Models</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    </ItemGroup>
+
+</Project>
