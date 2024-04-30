@@ -1,0 +1,55 @@
+<div class="rounded-container">
+    <div class="header">
+        <h5 class="heading">Pull Requests</h5>
+        <app-button [height]="'100%'" [text]="'Create PR'"></app-button>
+    </div>
+
+    <div class="actions">
+        <div class="inputs-container">
+            <app-input [width]="'100%'" [placeholder]="'Search...'" [formControl]="$any(searchForm.controls['search'])">
+            </app-input>
+            <app-dropdown-select
+                [width]="'100%'"
+                [placeholder]="'Branch type'"
+                [options]="dropdownItems"
+                [placeholderId]="0"
+                (valueChange)="onBranchTypeSelectionChange($event)">
+            </app-dropdown-select>
+            <app-dropdown-select
+                [width]="'100%'"
+                [placeholder]="'Author'"
+                [options]="dropdownAuthors"
+                [template]="usertemplate"
+                [chipTemplate]="chiptemplate"
+                [filterPredicate]="filter"
+                (valueChange)="onAuthorSelectionChange($event)">
+            </app-dropdown-select>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="reviewing" />
+            <label class="checkbox-label" for="reviewing">I'm reviewing</label>
+        </div>
+        <ng-template #usertemplate let-item>
+            <div class="user-container">
+                <img class="user-avatar" src="{{ item.avatarUrl }}" alt="User Avatar"/>
+                <p class="text-content">{{ getFullName(item) }}</p>
+            </div>
+        </ng-template>
+        <ng-template #chiptemplate let-item>
+            <p class="text-content">{{ item.email }}</p>
+        </ng-template>
+    </div>
+    <div class="table">
+        <div class="table-headers">
+            <p class="text-content first">Summary</p>
+            <p class="text-content second">Activity</p>
+            <p class="text-content third">Reviewers</p>
+        </div>
+        <div class="table-content">
+            <div class="pull-request-container" *ngFor="let pr of pullRequests">
+                <hr class="line" />
+                <app-pull-request [pullRequest]="pr"></app-pull-request>
+            </div>
+        </div>
+    </div>
+</div>

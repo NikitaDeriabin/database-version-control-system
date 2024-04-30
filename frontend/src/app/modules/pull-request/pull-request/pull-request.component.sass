@@ -1,0 +1,123 @@
+@import "/src/styles/color"
+@import '/src/styles/global'
+@import "/src/styles/weights"
+
+.container
+    display: flex
+    width: 100%
+    justify-content: space-between
+    margin-top: 13px
+    > *:not(:last-child)
+        margin-right: 15px
+
+.main-text
+    margin: 3px
+    font-size: 14px
+    font-style: normal
+    font-weight: $normal-weight
+    color: $text-main
+
+.summary
+    display: flex
+    align-items: center
+    width: 50%
+    > *:not(:last-child)
+        margin-right: 12px
+
+.activity
+    width: 35%
+    display: flex
+    justify-content: center
+    > .activity-element
+        display: flex
+        align-items: center
+
+.comments
+    > *
+        padding-right: 3px
+    .comment-count
+        margin-bottom: 4px
+
+.reviewiers
+    width: 15%
+    display: flex
+    justify-content: center
+    padding: 0 30px 0 30px
+
+.avatar
+    width: 44px
+    height: 44px
+    min-width: 44px
+    min-height: 44px
+    border-radius: 50%
+    overflow: hidden
+    outline: 4px solid $avatar-offline-outline
+    .online
+        outline: 4px solid $avatar-online-outline
+    .avatar-picture
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+
+.avatar-container
+    list-style-type: none
+    display: flex
+    margin: auto
+    padding: 0
+    flex-direction: row
+    .avatar:not(:first-child)
+        margin-left: -10px
+    .overflowed
+        @extend .avatar
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $misc-background-color
+        color: $text-light
+        font-weight: $semi-bold-weight
+        font-size: 14px
+        outline-color: white
+
+.primary-info
+    display: flex
+    align-items: center
+    font-weight: $medium-weight
+
+.primary-info > *:not(:last-child)
+        margin-right: 12px
+
+.secondary-info
+    .content
+        font-size: 12px
+        opacity: 0.5
+        font-style: normal
+        font-weight: 400
+        margin-top: 0
+
+.branch
+    background-color: $misc-background-color
+    border-radius: 10px
+    text-align: center
+    display: inline-block
+    white-space: nowrap
+    align-items: center
+    .content
+        padding: 9px
+        margin-block: 0
+.content
+    margin-bottom: 0
+
+@media screen and (max-width: 750px)
+    .activity
+        display: none
+
+    .summary
+        width: 85%
+
+@media screen and (max-width: 700px)
+    .reviewiers
+        display: none
+
+    .summary
+        width: 100%
