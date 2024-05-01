@@ -10,3 +10,6 @@ Client-side: Typescript, Angular, HTML, SASS
 
 ![img.png](img.png)
 
+**Database schema:**
+
+![img_1.png](img_1.png)
